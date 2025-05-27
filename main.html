@@ -15,6 +15,11 @@
         scroll-behavior: smooth;
       }
 
+      .logoMunicipio {
+        height: 62px;
+        margin-right: 10px;
+      }
+
       .hero-pattern {
         background-color: #f0f7ff;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e40af' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -56,7 +61,7 @@
         class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center"
       >
         <div class="flex items-center mb-3 md:mb-0">
-          <svg
+          <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-10 w-10 mr-3"
             fill="none"
@@ -70,6 +75,8 @@
               d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
             />
           </svg>
+          !-->
+          <img class="logoMunicipio" src="./logo.png" alt="logo municipal">
           <div>
             <h1 class="text-xl font-bold">Secretaria Municipal de Educação</h1>
             <p class="text-xs text-blue-200">
@@ -134,32 +141,6 @@
               >Contato</a
             >
           </nav>
-        </div>
-
-        <div class="hidden md:flex items-center">
-          <div class="relative">
-            <input
-              type="text"
-              placeholder="Pesquisar..."
-              class="bg-blue-800 text-white placeholder-blue-300 rounded-full py-1 px-4 focus:outline-none focus:ring-2 focus:ring-blue-300 text-sm"
-            />
-            <button class="absolute right-0 top-0 mr-2 mt-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 text-blue-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
-          </div>
         </div>
       </div>
     </header>
@@ -1901,84 +1882,14 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div class="bg-white rounded-lg shadow-md p-6 text-gray-800">
-            <h3 class="text-xl font-semibold text-blue-900 mb-4">
-              Envie sua mensagem
-            </h3>
-
-            <form id="contact-form" class="space-y-4">
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Nome completo</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >E-mail</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-
-              <div>
-                <label
-                  for="subject"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Assunto</label
-                >
-                <select
-                  id="subject"
-                  name="subject"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                >
-                  <option value="">Selecione um assunto</option>
-                  <option value="matricula">Matrícula</option>
-                  <option value="transferencia">Transferência</option>
-                  <option value="documentos">Documentos</option>
-                  <option value="duvidas">Dúvidas</option>
-                  <option value="reclamacoes">Reclamações</option>
-                  <option value="sugestoes">Sugestões</option>
-                </select>
-              </div>
-
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Mensagem</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                ></textarea>
-              </div>
-
-              <div>
-                <button
-                  type="submit"
-                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-300 shadow-md"
-                >
-                  Enviar Mensagem
-                </button>
-              </div>
-            </form>
+          <div class="bg-white rounded-lg shadow-md p-6 text-gray-800 h-[500px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d552.2903636687894!2d-40.5120555274118!3d-9.397010992467646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x773718d7b809eb7%3A0x9c21c45743586b60!2sSecretaria%20municipal%20de%20educa%C3%A7%C3%A3o%2C%20cultura%20e%20esporte%20(SEDUCE)!5e0!3m2!1spt-BR!2sbr!4v1748355888433!5m2!1spt-BR!2sbr"
+              class="w-full h-full rounded-lg border-0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
 
           <div>
@@ -2463,17 +2374,6 @@
 
       backToTopButton.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      // Form submission
-      const contactForm = document.getElementById("contact-form");
-
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        // Here you would typically send the form data to a server
-        alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-        contactForm.reset();
       });
 
       // Smooth scrolling for anchor links
