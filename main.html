@@ -1656,63 +1656,7 @@
               Próximos Eventos
             </h4>
 
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="bg-blue-100 rounded-lg p-2 mr-4">
-                  <span class="block text-blue-800 font-bold text-center"
-                    >15</span
-                  >
-                  <span class="block text-blue-600 text-xs text-center"
-                    >Mai</span
-                  >
-                </div>
-                <div>
-                  <h5 class="font-medium text-blue-900">
-                    Reunião de Pais e Mestres
-                  </h5>
-                  <p class="text-sm text-gray-600">
-                    18:30 - Escola Municipal Central
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="bg-blue-100 rounded-lg p-2 mr-4">
-                  <span class="block text-blue-800 font-bold text-center"
-                    >20</span
-                  >
-                  <span class="block text-blue-600 text-xs text-center"
-                    >Mai</span
-                  >
-                </div>
-                <div>
-                  <h5 class="font-medium text-blue-900">
-                    Feira de Ciências Municipal
-                  </h5>
-                  <p class="text-sm text-gray-600">
-                    09:00 - Centro de Convenções
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="bg-blue-100 rounded-lg p-2 mr-4">
-                  <span class="block text-blue-800 font-bold text-center"
-                    >25</span
-                  >
-                  <span class="block text-blue-600 text-xs text-center"
-                    >Mai</span
-                  >
-                </div>
-                <div>
-                  <h5 class="font-medium text-blue-900">
-                    Formação Continuada - Professores
-                  </h5>
-                  <p class="text-sm text-gray-600">
-                    14:00 - Centro de Formação Pedagógica
-                  </p>
-                </div>
-              </div>
+            <div class="space-y-4" id="proximos-eventos">
             </div>
 
             <div class="mt-6">
@@ -2552,6 +2496,80 @@
           }
         });
       });
+
+      // PROXIMOS EVENTOS
+      // ----------------------------------------------------- //
+      const hoje = new Date();
+      const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+      const eventos = [
+        {
+          nome: "fasjuhdoaisuhd",
+          local: "Escola Municipal Central",
+          hora: "18:30",
+          dia: 12,
+          mes: 3,
+        },
+
+        {
+          nome: "Reunião de Pais e Mestres",
+          local: "Escola Municipal Central",
+          hora: "18:30",
+          dia: 15,
+          mes: 4,
+        },
+        {
+          nome: "Feira de Ciências Municipal",
+          local: "Centro de Convenções",
+          hora: "09:00",
+          dia: 20,
+          mes: 4,
+        },
+        {
+          nome: "Formação Continuada - Professores",
+          local: "Centro de Formação Pedagógica",
+          hora: "14:00",
+          dia: 25,
+          mes: 4,
+        },
+        {
+          nome: "Sei la",
+          local: "Centro de Formação Pedagógica",
+          hora: "14:00",
+          dia: 29,
+          mes: 4,
+        },
+        {
+          nome: "No country for old men",
+          local: "fasijpf",
+          hora: "12:00",
+          dia: 30,
+          mes: 4,
+        },
+      ];
+
+      const eventosMes = eventos.filter(evento => evento.mes === hoje.getMonth() && evento.dia >= hoje.getDate());
+
+      const container_eventos = document.getElementById('proximos-eventos');
+
+      eventosMes.forEach(evento => {
+      const eventoDiv = document.createElement('div');
+      eventoDiv.className = 'flex items-start';
+        
+      eventoDiv.innerHTML = `
+        <div class="bg-blue-100 rounded-lg p-2 mr-4">
+          <span class="block text-blue-800 font-bold text-center">${evento.dia}</span>
+          <span class="block text-blue-600 text-xs text-center">${meses[evento.mes]}</span>
+        </div>
+        <div>
+          <h5 class="font-medium text-blue-900">${evento.nome}</h5>
+          <p class="text-sm text-gray-600">${evento.hora} - ${evento.local}</p>
+        </div>
+      `;
+      
+      container_eventos.appendChild(eventoDiv);
+      });
+      // ----------------------------------------------------- //
+
     </script>
   </body>
 </html>
