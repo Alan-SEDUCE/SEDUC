@@ -271,8 +271,12 @@
             />
           </svg>
           <p class="text-blue-800 text-sm font-medium">
-            Matrículas abertas para o ano letivo 2025!
-            <a href="#" class="underline">Saiba mais</a>
+            Resultado Final de Solicitações!
+            <a
+              href="https://petrolina-pe.portalsigeduc.com.br/app/public/gerenciar_solicitacao_pre_matricula/form.jsf"
+              class="underline"
+              >Saiba mais</a
+            >
           </p>
         </div>
       </div>
@@ -364,14 +368,14 @@
               </svg>
             </div>
             <h3 class="text-xl font-semibold text-blue-900 mb-2">
-              Emissão de Documentos
+              Programa Busca do Bem
             </h3>
             <p class="text-gray-600 mb-4">
-              Solicite históricos escolares, declarações, certificados e outros
-              documentos oficiais.
+              Qualificar e integrar açoes para garantir o acesso, a permannência
+              e a frquência escolar na Rede Municipal de Ensino de Petrolina.
             </p>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1cS8GhpYMc1P63VLbxFozo0NapWujogQT/view"
               class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
             >
               Acessar serviço
@@ -414,12 +418,9 @@
                 />
               </svg>
             </div>
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">
-              Portal do Professor
-            </h3>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">SIM! Alfa</h3>
             <p class="text-gray-600 mb-4">
-              Acesse recursos pedagógicos, registre frequências e notas, e
-              compartilhe materiais com os alunos.
+              Sistema Informatizado de Monitoramento da Alfabetização.
             </p>
             <a
               href="#"
@@ -1637,8 +1638,7 @@
               Próximos Eventos
             </h4>
 
-            <div class="space-y-4" id="proximos-eventos">
-            </div>
+            <div class="space-y-4" id="proximos-eventos"></div>
 
             <div class="mt-6">
               <a
@@ -2400,7 +2400,20 @@
       // PROXIMOS EVENTOS
       // ----------------------------------------------------- //
       const hoje = new Date();
-      const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+      const meses = [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul",
+        "Ago",
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+      ];
       const eventos = [
         {
           nome: "fasjuhdoaisuhd",
@@ -2447,29 +2460,35 @@
         },
       ];
 
-      const eventosMes = eventos.filter(evento => evento.mes === hoje.getMonth() && evento.dia >= hoje.getDate());
+      const eventosMes = eventos.filter(
+        (evento) =>
+          evento.mes === hoje.getMonth() && evento.dia >= hoje.getDate()
+      );
 
-      const container_eventos = document.getElementById('proximos-eventos');
+      const container_eventos = document.getElementById("proximos-eventos");
 
-      eventosMes.forEach(evento => {
-      const eventoDiv = document.createElement('div');
-      eventoDiv.className = 'flex items-start';
-        
-      eventoDiv.innerHTML = `
+      eventosMes.forEach((evento) => {
+        const eventoDiv = document.createElement("div");
+        eventoDiv.className = "flex items-start";
+
+        eventoDiv.innerHTML = `
         <div class="bg-blue-100 rounded-lg p-2 mr-4">
-          <span class="block text-blue-800 font-bold text-center">${evento.dia}</span>
-          <span class="block text-blue-600 text-xs text-center">${meses[evento.mes]}</span>
+          <span class="block text-blue-800 font-bold text-center">${
+            evento.dia
+          }</span>
+          <span class="block text-blue-600 text-xs text-center">${
+            meses[evento.mes]
+          }</span>
         </div>
         <div>
           <h5 class="font-medium text-blue-900">${evento.nome}</h5>
           <p class="text-sm text-gray-600">${evento.hora} - ${evento.local}</p>
         </div>
       `;
-      
-      container_eventos.appendChild(eventoDiv);
+
+        container_eventos.appendChild(eventoDiv);
       });
       // ----------------------------------------------------- //
-
     </script>
   </body>
 </html>
