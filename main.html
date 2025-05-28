@@ -53,6 +53,14 @@
       .accordion-content.active {
         max-height: 500px;
       }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
     </style>
   </head>
 
@@ -528,6 +536,7 @@
         </div>
       </div>
     </section>
+
     <!-- Documents Section -->
     <section id="documentos" class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
@@ -540,54 +549,102 @@
         </div>
 
         <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="flex border-b">
+          <div class="relative">
+            <!-- Left Arrow -->
             <button
-              class="tab-button py-4 px-6 font-medium text-blue-900 border-b-2 border-blue-600 bg-blue-50 flex-1 text-center"
-              data-tab="documentos-rede"
+              id="scroll-left"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2"
             >
-              Documentos da rede
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-blue-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
             </button>
-            <button
-              class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-1 text-center"
-              data-tab="materiais-rede"
+
+            <!-- Tabs Container (Scrollable) -->
+            <div
+              id="tabs-scroll"
+              class="flex overflow-x-auto whitespace-nowrap no-scrollbar border-b mx-10"
             >
-              Materiais para a rede
-            </button>
+              <button
+                class="tab-button py-4 px-6 font-medium text-blue-900 border-b-2 border-blue-600 bg-blue-50 flex-shrink-0 text-center"
+                data-tab="documentos-rede"
+              >
+                Documentos da rede
+              </button>
+              <button
+                class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-shrink-0 text-center"
+                data-tab="materiais-rede"
+              >
+                Materiais para a rede
+              </button>
+              <button
+                class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-shrink-0 text-center"
+                data-tab="guia-sigeduc"
+              >
+                Guia de uso SIGEduc
+              </button>
+              <button
+                class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-shrink-0 text-center"
+                data-tab="instrucoes-1doc"
+              >
+                Instruções 1Doc
+              </button>
+              <button
+                class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-shrink-0 text-center"
+                data-tab="calendario-2025"
+              >
+                Calendário Escolar
+              </button>
+              <button
+                class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-shrink-0 text-center"
+                data-tab="guia-busca"
+              >
+                Guia de Busca do bem
+              </button>
+              <button
+                class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-shrink-0 text-center"
+                data-tab="prestacao-contas"
+              >
+                Prestação de Contas
+              </button>
+              <button
+                class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-shrink-0 text-center"
+                data-tab="imagens-institucionais"
+              >
+                Imagens Institucionais
+              </button>
+            </div>
+
+            <!-- Right Arrow -->
             <button
-              class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-1 text-center"
-              data-tab="guia-sigeduc"
+              id="scroll-right"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2"
             >
-              Guia de uso SIGEduc
-            </button>
-            <button
-              class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-1 text-center"
-              data-tab="instrucoes-1doc"
-            >
-              Instruções 1Doc
-            </button>
-            <button
-              class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-1 text-center"
-              data-tab="calendario"
-            >
-              Calendário Escolar
-            </button>
-            <button
-              class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-1 text-center"
-              data-tab="guia-busca"
-            >
-              Guia de Busca do bem
-            </button>
-            <button
-              class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-1 text-center"
-              data-tab="prestacao-contas"
-            >
-              Prestação de Contas
-            </button>
-            <button
-              class="tab-button py-4 px-6 font-medium text-gray-600 hover:text-blue-900 flex-1 text-center"
-              data-tab="imagens-institucionais"
-            >
-              Imagens Institucionais
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-blue-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </button>
           </div>
 
@@ -1020,7 +1077,7 @@
           </div>
 
           <!-- Tab Content: Calendário Escolar -->
-          <div class="tab-content p-6">
+          <div id="calendario-2025" class="tab-content p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <a
                 href="https://drive.google.com/file/d/18iv28tFa-vGopjQq6FB-5nUZTCDAFQgt/view?usp=sharing"
@@ -1946,6 +2003,15 @@
 
       mobileMenuButton.addEventListener("click", () => {
         menu.classList.toggle("hidden");
+      });
+
+      //Tab arrows
+      const scrollContainer = document.getElementById("tabs-scroll");
+      document.getElementById("scroll-left").addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: -150, behavior: "smooth" });
+      });
+      document.getElementById("scroll-right").addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: 150, behavior: "smooth" });
       });
 
       // Tab functionality
