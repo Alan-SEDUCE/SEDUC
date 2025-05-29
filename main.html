@@ -51,7 +51,7 @@
       }
 
       .accordion-content.active {
-        max-height: 500px;
+        max-height: 2000px;
       }
 
       .no-scrollbar::-webkit-scrollbar {
@@ -60,6 +60,24 @@
       .no-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
+      }
+
+      @media (max-width: 900px) {
+          .card-pessoa {
+              text-align: center;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+          }
+          
+          .card-pessoa img {
+              margin: 0 auto; /* Centraliza a imagem horizontalmente */
+              margin-bottom: 1rem; /* Espaço entre imagem e texto */
+          }
+          
+          .card-pessoa > div {
+              width: 100%; /* Garante que o container de texto ocupe toda a largura */
+          }
       }
     </style>
   </head>
@@ -151,6 +169,11 @@
               href="#contato"
               class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
               >Contato</a
+            >
+            <a
+              href="#secretaria"
+              class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
+              >Secretaria</a
             >
           </nav>
         </div>
@@ -1453,10 +1476,10 @@
     <section id="mymaps" class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+          <h2 class="text-3xl font-bold text-blue-900 mb-2">
             Tem Escola Aqui
           </h2>
-          <p class="text-gray-700 text-lg">
+          <p class="text-gray-600 max-w-2xl mx-auto">
             Veja quais Unidades próximas à sua localidade
           </p>
         </div>
@@ -1791,7 +1814,7 @@
     <!-- Secretaria SECTION -->
 
     <!-- SECRETARIA Section -->
-    <section class="py-16 bg-gray-50">
+    <section id="secretaria" class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-blue-900 mb-2">
@@ -1807,7 +1830,7 @@
 
         <div class="max-w-5xl mx-auto space-y-6">
 
-          <div class="bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5">
+          <div class="card-pessoa bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5">
             <img 
               src="./Simao-Durando-Prefeito.jpeg" 
               class="w-[190px] h-auto object-cover rounded" 
@@ -1816,7 +1839,7 @@
             <div class="flex-1 min-w-0">
               <h2 class="text-xl font-semibold text-blue-900">Simão Amorim Durando Filho</h2>
               <h3 class="text-lg font-semibold text-blue-900 mt-1">Prefeito Municipal de Petrolina</h3>
-              <p class="text-gray-600 mb-4">
+              <p class="text-gray-600 mb-4 text-justify">
                 Simão Amorim Durando Filho, natural de Petrolina, é filho do ex-prefeito Simão Amorim
                 Durando e de Josefa Durando, casado com Alinne Monteiro Cavalcante Durando e pai de
                 Giovanna e Ana Luh. É bacharel em Publicidade e Marketing pela FATEC de São Paulo e pós-
@@ -1830,7 +1853,7 @@
             </div>
           </div>
 
-          <div class="bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5">
+          <div class="card-pessoa bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5">
             <img 
               src="./Rosana-Secretária.jpeg" 
               class="w-[190px] h-auto object-cover rounded" 
@@ -1839,13 +1862,52 @@
             <div class="flex-1 min-w-0">
               <h2 class="text-xl font-semibold text-blue-900">Rosane da Costa Santos</h2>
               <h3 class="text-lg font-semibold text-blue-900 mt-1">Secretária de Educação, Cultura e Esporte</h3>
-              <p class="text-gray-600 mb-4">
+              <p class="text-gray-600 mb-4 text-justify">
                 Natural de Casa Nova (BA), é pedagoga, especialista em Gestão Escolar e professora efetiva
                 das Redes Municipais de Petrolina e Juazeiro. Na Rede Municipal de Petrolina atua há 12 anos,
                 foi professora substituta e efetiva, coordenadora pedagógica, gestora escolar, tutora de
                 gestão escolar, secretária executiva de ensino e secretária executiva de administração. Desde
                 2022 é a Secretária Municipal de Educação, Cultura e Esporte de Petrolina.
               </p>
+            </div>
+          </div>
+          <div class="max-w-5xl mx-auto p-6">
+            <button class="accordion-button cursor-pointer border-b-2 border-blue-900 pb-2 mb-6 flex justify-between items-center w-full">
+              <h1 class="text-2xl font-bold text-blue-900">
+                SECRETARIA DE EDUCAÇÃO, CULTURA E ESPORTE
+              </h1>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#366fec" class="accordion-icon">
+                <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+              </svg>
+            </button>
+
+            <div class="accordion-content">
+               <h2 class="text-xl font-semibold text-blue-800 mb-4">
+                ATRIBUIÇÕES E ESTRUTURA:
+              </h2> 
+
+              <p class="text-gray-700 mb-6">
+                Composta por Secretarias Executivas, Assessoria Técnica e Jurídica.
+              </p>
+              
+              <h2 class="text-xl font-semibold text-blue-800 mb-4">
+                São competências da Secretaria Municipal de Educação, Cultura e Esporte – SEDUCE:
+              </h2>
+              
+              <ol class="list-decimal pl-6 space-y-3 text-gray-700" style="list-style-type: upper-roman;">
+                <li class="pl-2">Promover as condições necessárias ao desenvolvimento intelectual, físico e moral dos munícipes de Petrolina, competindo-lhe ainda;</li>
+                <li class="pl-2">Desenvolver, precipuamente, políticas e diretrizes de desenvolvimento da educação infantil e do ensino fundamental;</li>
+                <li class="pl-2">Promover o atendimento de jovens e adultos de 15 anos e mais, que ao longo de sua vida não tiveram oportunidade sequer de se alfabetizarem ou concluírem seus estudos na idade certa;</li>
+                <li class="pl-2">Estabelecer mecanismos que avaliem e garantam a qualidade do ensino público;</li>
+                <li class="pl-2">Definir parâmetros e realizar avaliações, pesquisas e inovações educacionais, garantindo a organização e funcionamento da escola municipal;</li>
+                <li class="pl-2">Acompanhar e apoiar a gestão das unidades escolares, fomentando um movimento de reflexão e ação em torno de eixos importantes: indicadores, processos escolares e instrumentos de gestão;</li>
+                <li class="pl-2">Subsidiar o planejamento integrado do município, em sua área de atuação;</li>
+                <li class="pl-2">Orientar e inspecionar o funcionamento de estabelecimentos de ensino de sua área de competência;</li>
+                <li class="pl-2">Implementar metodologias de acompanhamento e formação em serviço, feita no dia a dia da escola, visando potencializar os diretores e exercer um impacto na melhoria da aprendizagem dos alunos;</li>
+                <li class="pl-2">Instituir a Política de Valorização do Magistério, elaborando as diretrizes e ações sistematizadas de valorização do professor, atuando em sua formação, exercício da profissão e resultados alcançados;</li>
+                <li class="pl-2">Manter estreita relação e vínculo de comunicação com todas as Secretarias, visando a boa gestão, comunicação e eficácia do serviço público;</li>
+                <li class="pl-2">Realizar outras atividades correlatas que lhe forem delegadas pelo chefe do executivo municipal.</li>
+              </ol>
             </div>
           </div>
         </div>
@@ -2111,6 +2173,13 @@
                   href="#calendario"
                   class="text-blue-300 hover:text-white transition duration-200"
                   >Calendário</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#secretaria"
+                  class="text-blue-300 hover:text-white transition duration-200"
+                  >Secretaria</a
                 >
               </li>
             </ul>
