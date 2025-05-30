@@ -9,77 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      * {
-        font-family: "Poppins", sans-serif;
-        scroll-behavior: smooth;
-      }
-
-      .logoMunicipio {
-        height: 62px;
-        margin-right: 10px;
-      }
-
-      .hero-pattern {
-        background-color: #f0f7ff;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e40af' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      }
-
-      .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-          0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      }
-
-      .news-card:hover {
-        transform: scale(1.02);
-      }
-
-      .tab-content {
-        display: none;
-      }
-
-      .tab-content.active {
-        display: block;
-      }
-
-      .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-      }
-
-      .accordion-content.active {
-        max-height: 2000px;
-      }
-
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-
-      @media (max-width: 900px) {
-          .card-pessoa {
-              text-align: center;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-          }
-          
-          .card-pessoa img {
-              margin: 0 auto; /* Centraliza a imagem horizontalmente */
-              margin-bottom: 1rem; /* Espaço entre imagem e texto */
-          }
-          
-          .card-pessoa > div {
-              width: 100%; /* Garante que o container de texto ocupe toda a largura */
-          }
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
   </head>
 
   <body class="bg-gray-50">
@@ -104,7 +34,7 @@
             />
           </svg>
           !-->
-          <img class="logoMunicipio" src="./logo.png" alt="logo municipal" />
+          <img class="logoMunicipio" src="./imgs/logo.png" alt="logo municipal" />
           <div>
             <h1 class="text-xl font-bold">
               Secretaria Municipal de Educação, Cultura e Esporte
@@ -214,7 +144,7 @@
           </div>
           <div class="md:w-1/2 flex justify-center">
             <img
-              src="Logo Eu, Você, o Mundo.png"
+              src="./imgs/Logo Eu, Você, o Mundo.png"
               alt="Imagem ilustrativa"
               class="w-full max-w-md"
             />
@@ -2486,7 +2416,7 @@
       <!-- Prefeito -->
       <div class="card-pessoa bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5">
         <img 
-          src="./Simao-Durando-Prefeito.jpeg" 
+          src="./imgs/Simao-Durando-Prefeito.jpeg" 
           class="w-[190px] h-auto object-cover rounded" 
           alt="Prefeito de Petrolina Simão Durando"
         />
@@ -2510,7 +2440,7 @@
       <!-- Secretária -->
       <div class="card-pessoa bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5">
         <img 
-          src="./Rosana-Secretária.jpeg" 
+          src="./imgs/Rosana-Secretária.jpeg" 
           class="w-[190px] h-auto object-cover rounded" 
           alt="Rosane da Costa Santos, Secretária"
         />
@@ -2780,7 +2710,7 @@
             <div class="flex items-center mb-4">
               <img
                 class="logoMunicipio"
-                src="./logo.png"
+                src="./imgs/logo.png"
                 alt="logo municipal"
               />
               <h3 class="text-xl font-bold">
@@ -2918,291 +2848,6 @@
         />
       </svg>
     </button>
-
-    <!-- JavaScript -->
-    <script>
-      // Mobile menu toggle
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const menu = document.getElementById("menu");
-
-      mobileMenuButton.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
-      //Tab arrows
-      const scrollContainer = document.getElementById("tabs-scroll");
-      document.getElementById("scroll-left").addEventListener("click", () => {
-        scrollContainer.scrollBy({ left: -150, behavior: "smooth" });
-      });
-      document.getElementById("scroll-right").addEventListener("click", () => {
-        scrollContainer.scrollBy({ left: 150, behavior: "smooth" });
-      });
-
-      // Tab functionality
-      const tabButtons = document.querySelectorAll(".tab-button");
-      const tabContents = document.querySelectorAll(".tab-content");
-
-      tabButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const tabId = button.getAttribute("data-tab");
-
-          // Remove active class from all buttons and contents
-          tabButtons.forEach((btn) => {
-            btn.classList.remove(
-              "text-blue-900",
-              "border-b-2",
-              "border-blue-600",
-              "bg-blue-50"
-            );
-            btn.classList.add("text-gray-600", "hover:text-blue-900");
-          });
-
-          tabContents.forEach((content) => {
-            content.classList.remove("active");
-          });
-
-          // Add active class to clicked button and corresponding content
-          button.classList.add(
-            "text-blue-900",
-            "border-b-2",
-            "border-blue-600",
-            "bg-blue-50"
-          );
-          button.classList.remove("text-gray-600", "hover:text-blue-900");
-          document.getElementById(tabId).classList.add("active");
-        });
-      });
-
-      // Accordion functionality
-      const accordionButtons = document.querySelectorAll(".accordion-button");
-
-      accordionButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const icon = button.querySelector(".accordion-icon");
-          const content = button.nextElementSibling;
-
-          icon.classList.toggle("rotate-180");
-          content.classList.toggle("active");
-        });
-      });
-
-      // Calendar functionality
-      const prevMonthButton = document.getElementById("prev-month");
-      const nextMonthButton = document.getElementById("next-month");
-      const currentMonthElement = document.getElementById("current-month");
-      const calendarDaysElement = document.getElementById("calendar-days");
-
-      let currentDate = new Date();
-
-      function renderCalendar() {
-        const year = currentDate.getFullYear();
-        const month = currentDate.getMonth();
-
-        // Update month and year display
-        currentMonthElement.textContent = new Intl.DateTimeFormat("pt-BR", {
-          month: "long",
-          year: "numeric",
-        }).format(currentDate);
-
-        // Get first day of month and total days in month
-        const firstDay = new Date(year, month, 1).getDay();
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-        // Clear previous calendar days
-        calendarDaysElement.innerHTML = "";
-
-        // Add empty cells for days before the first day of the month
-        for (let i = 0; i < firstDay; i++) {
-          const emptyDay = document.createElement("div");
-          emptyDay.classList.add("h-12");
-          calendarDaysElement.appendChild(emptyDay);
-        }
-
-        // Add cells for each day of the month
-        for (let day = 1; day <= daysInMonth; day++) {
-          const dayElement = document.createElement("div");
-          dayElement.classList.add(
-            "h-12",
-            "flex",
-            "items-center",
-            "justify-center",
-            "border",
-            "border-gray-200"
-          );
-
-          // Highlight current day
-          const today = new Date();
-          if (
-            day === today.getDate() &&
-            month === today.getMonth() &&
-            year === today.getFullYear()
-          ) {
-            dayElement.classList.add(
-              "bg-blue-100",
-              "font-semibold",
-              "text-blue-800"
-            );
-          }
-
-          // Add event indicators (example for days 5, 15, 20)
-          if (day === 5 || day === 15 || day === 20) {
-            dayElement.innerHTML = `
-                        <div class="relative">
-                            <span>${day}</span>
-                            <span class="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></span>
-                        </div>
-                    `;
-          } else {
-            dayElement.textContent = day;
-          }
-
-          calendarDaysElement.appendChild(dayElement);
-        }
-      }
-
-      prevMonthButton.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
-      });
-
-      nextMonthButton.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
-      });
-
-      // Initialize calendar
-      renderCalendar();
-
-      // Back to top button
-      const backToTopButton = document.getElementById("back-to-top");
-
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-          backToTopButton.classList.remove("opacity-0", "invisible");
-          backToTopButton.classList.add("opacity-100", "visible");
-        } else {
-          backToTopButton.classList.remove("opacity-100", "visible");
-          backToTopButton.classList.add("opacity-0", "invisible");
-        }
-      });
-
-      backToTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: "smooth",
-            });
-
-            // Close mobile menu if open
-            if (!menu.classList.contains("hidden")) {
-              menu.classList.add("hidden");
-            }
-          }
-        });
-      });
-
-      // PROXIMOS EVENTOS
-      // ----------------------------------------------------- //
-      const hoje = new Date();
-      const meses = [
-        "Jan",
-        "Fev",
-        "Mar",
-        "Abr",
-        "Mai",
-        "Jun",
-        "Jul",
-        "Ago",
-        "Set",
-        "Out",
-        "Nov",
-        "Dez",
-      ];
-      const eventos = [
-        {
-          nome: "fasjuhdoaisuhd",
-          local: "Escola Municipal Central",
-          hora: "18:30",
-          dia: 12,
-          mes: 3,
-        },
-
-        {
-          nome: "Reunião de Pais e Mestres",
-          local: "Escola Municipal Central",
-          hora: "18:30",
-          dia: 15,
-          mes: 4,
-        },
-        {
-          nome: "Feira de Ciências Municipal",
-          local: "Centro de Convenções",
-          hora: "09:00",
-          dia: 20,
-          mes: 4,
-        },
-        {
-          nome: "Formação Continuada - Professores",
-          local: "Centro de Formação Pedagógica",
-          hora: "14:00",
-          dia: 25,
-          mes: 4,
-        },
-        {
-          nome: "Sei la",
-          local: "Centro de Formação Pedagógica",
-          hora: "14:00",
-          dia: 29,
-          mes: 4,
-        },
-        {
-          nome: "No country for old men",
-          local: "fasijpf",
-          hora: "12:00",
-          dia: 30,
-          mes: 4,
-        },
-      ];
-
-      const eventosMes = eventos.filter(
-        (evento) =>
-          evento.mes === hoje.getMonth() && evento.dia >= hoje.getDate()
-      );
-
-      const container_eventos = document.getElementById("proximos-eventos");
-
-      eventosMes.forEach((evento) => {
-        const eventoDiv = document.createElement("div");
-        eventoDiv.className = "flex items-start";
-
-        eventoDiv.innerHTML = `
-        <div class="bg-blue-100 rounded-lg p-2 mr-4">
-          <span class="block text-blue-800 font-bold text-center">${
-            evento.dia
-          }</span>
-          <span class="block text-blue-600 text-xs text-center">${
-            meses[evento.mes]
-          }</span>
-        </div>
-        <div>
-          <h5 class="font-medium text-blue-900">${evento.nome}</h5>
-          <p class="text-sm text-gray-600">${evento.hora} - ${evento.local}</p>
-        </div>
-      `;
-
-        container_eventos.appendChild(eventoDiv);
-      });
-      // ----------------------------------------------------- //
-    </script>
   </body>
+   <script src="script.js"></script>
 </html>
