@@ -172,7 +172,7 @@ const meses = [
 
 const eventos = [
   {
-    nome: "fasjuhdoaisuhd",
+    nome: "Reunião Secretarios",
     local: "Escola Municipal Central",
     hora: "18:30",
     dia: 12,
@@ -197,20 +197,6 @@ const eventos = [
     local: "Centro de Formação Pedagógica",
     hora: "14:00",
     dia: 25,
-    mes: 5,
-  },
-  {
-    nome: "Sei la",
-    local: "Centro de Formação Pedagógica",
-    hora: "14:00",
-    dia: 29,
-    mes: 5,
-  },
-  {
-    nome: "No country for old men",
-    local: "fasijpf",
-    hora: "12:00",
-    dia: 30,
     mes: 5,
   },
 ];
