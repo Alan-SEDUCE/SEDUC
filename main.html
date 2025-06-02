@@ -14,98 +14,90 @@
 
   <body class="bg-gray-50">
     <!-- Header -->
+    <!-- Header Responsivo -->
     <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
-      <div
-        class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center"
-      >
-        <div class="flex items-center mb-3 md:mb-0">
-          <!-- <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10 mr-3"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <!-- Logo e Título -->
+          <div class="flex items-center logo-container">
+            <img
+              class="logoMunicipio h-10 w-10 mr-3"
+              src="./imgs/logo.png"
+              alt="logo municipal"
             />
-          </svg>
-          !-->
-          <img class="logoMunicipio" src="./imgs/logo.png" alt="logo municipal" />
-          <div>
-            <h1 class="text-xl font-bold">
-              Secretaria Municipal de Educação, Cultura e Esporte
-            </h1>
-            <p class="text-xs text-blue-200">
-              Com trabalho, a gente vive melhor.
-            </p>
+            <div>
+              <h1 class="text-lg md:text-xl font-bold leading-tight">
+                Secretaria Municipal de Educação, Cultura e Esporte
+              </h1>
+              <p class="text-xs text-blue-200 hidden sm:block">
+                Com trabalho, a gente vive melhor.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-center">
-          <button
-            id="mobile-menu-button"
-            class="md:hidden text-white focus:outline-none"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <!-- Menu e Botão Mobile -->
+          <div class="flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="md:hidden text-white focus:outline-none ml-4"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
 
-          <nav
-            id="menu"
-            class="hidden md:flex flex-col md:flex-row absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-blue-800 md:bg-transparent p-4 md:p-0 rounded-b-lg shadow-lg md:shadow-none z-50"
-          >
-            <a
-              href="#inicio"
-              class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
-              >Início</a
+            <nav
+              id="menu"
+              class="hidden md:flex md:items-center md:space-x-2 lg:space-x-4"
             >
-            <a
-              href="#servicos"
-              class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
-              >Serviços</a
-            >
-            <a
-              href="#documentos"
-              class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
-              >Documentos</a
-            >
-            <a
-              href="#mymaps"
-              class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
-              >Tem Escola Aqui</a
-            >
-            <a
-              href="#calendario"
-              class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
-              >Calendário</a
-            >
-            <a
-              href="#contato"
-              class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
-              >Contato</a
-            >
-            <a
-              href="#secretaria"
-              class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
-              >Secretaria</a
-            >
-          </nav>
+              <a
+                href="#inicio"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition duration-200"
+                >Início</a
+              >
+              <a
+                href="#servicos"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition duration-200"
+                >Serviços</a
+              >
+              <a
+                href="#documentos"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition duration-200"
+                >Documentos</a
+              >
+              <a
+                href="#mymaps"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition duration-200"
+                >Tem Escola Aqui</a
+              >
+              <a
+                href="#calendario"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition duration-200"
+                >Calendário</a
+              >
+              <a
+                href="#contato"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition duration-200"
+                >Contato</a
+              >
+              <a
+                href="#secretaria"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition duration-200"
+                >Secretaria</a
+              >
+            </nav>
+          </div>
         </div>
       </div>
       <div class="flex h-[4px] w-full">
@@ -182,118 +174,226 @@
         </div>
       </div>
     </div>
-<!-- Informativos Section -->
-<section id="informativos" class="py-16 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-blue-900 mb-2">Informativos e Formulários</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        Fique por dentro dos prazos importantes e acesse os formulários necessários.
-      </p>
-    </div>
+    <!-- Informativos Section -->
+    <section id="informativos" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-blue-900 mb-2">
+            Informativos e Formulários
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Fique por dentro dos prazos importantes e acesse os formulários
+            necessários.
+          </p>
+        </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Card de Datas Importantes -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-blue-500">
-        <div class="p-6">
-          <div class="flex items-center mb-4">
-            <div class="bg-blue-100 p-3 rounded-full mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Card de Datas Importantes -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-blue-500"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-900">
+                  Datas Importantes
+                </h3>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 h-6 w-6 text-green-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span class="ml-2 text-gray-700">
+                    <strong>Matrículas 2024:</strong> 15/01 a 30/01
+                  </span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 h-6 w-6 text-yellow-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="ml-2 text-gray-700">
+                    <strong>Requerimentos de Transferência:</strong> Até 20/02
+                  </span>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 h-6 w-6 text-red-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </div>
+                  <span class="ml-2 text-gray-700">
+                    <strong>Encerramento Rematrículas:</strong> 10/12
+                  </span>
+                </li>
+              </ul>
             </div>
-            <h3 class="text-xl font-semibold text-blue-900">Datas Importantes</h3>
           </div>
-          
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <div class="flex-shrink-0 h-6 w-6 text-green-500">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
+
+          <!-- Card de Formulários -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-green-500"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-green-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-900">
+                  Formulários Online
+                </h3>
               </div>
-              <span class="ml-2 text-gray-700">
-                <strong>Matrículas 2024:</strong> 15/01 a 30/01
-              </span>
-            </li>
-            <li class="flex items-start">
-              <div class="flex-shrink-0 h-6 w-6 text-yellow-500">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+
+              <div class="space-y-4">
+                <a
+                  href="https://petrolina-pe.portalsigeduc.com.br/app/public/gerenciar_solicitacao_pre_matricula/form.jsf"
+                  class="block p-3 border border-gray-200 rounded-lg hover:bg-blue-50 transition duration-200"
+                >
+                  <div class="flex items-center">
+                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 text-blue-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                    </div>
+                    <span class="font-medium text-gray-800"
+                      >Pré-matrícula Online</span
+                    >
+                  </div>
+                </a>
+
+                <a
+                  href="#"
+                  class="block p-3 border border-gray-200 rounded-lg hover:bg-blue-50 transition duration-200"
+                >
+                  <div class="flex items-center">
+                    <div class="bg-purple-100 p-2 rounded-full mr-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 text-purple-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                        />
+                      </svg>
+                    </div>
+                    <span class="font-medium text-gray-800"
+                      >Solicitação de Transferência</span
+                    >
+                  </div>
+                </a>
+
+                <a
+                  href="#"
+                  class="block p-3 border border-gray-200 rounded-lg hover:bg-blue-50 transition duration-200"
+                >
+                  <div class="flex items-center">
+                    <div class="bg-yellow-100 p-2 rounded-full mr-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 text-yellow-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                        />
+                      </svg>
+                    </div>
+                    <span class="font-medium text-gray-800"
+                      >Material Didático</span
+                    >
+                  </div>
+                </a>
               </div>
-              <span class="ml-2 text-gray-700">
-                <strong>Requerimentos de Transferência:</strong> Até 20/02
-              </span>
-            </li>
-            <li class="flex items-start">
-              <div class="flex-shrink-0 h-6 w-6 text-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </div>
-              <span class="ml-2 text-gray-700">
-                <strong>Encerramento Rematrículas:</strong> 10/12
-              </span>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Card de Formulários -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-green-500">
-        <div class="p-6">
-          <div class="flex items-center mb-4">
-            <div class="bg-green-100 p-3 rounded-full mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-blue-900">Formulários Online</h3>
-          </div>
-          
-          <div class="space-y-4">
-            <a href="https://petrolina-pe.portalsigeduc.com.br/app/public/gerenciar_solicitacao_pre_matricula/form.jsf" 
-               class="block p-3 border border-gray-200 rounded-lg hover:bg-blue-50 transition duration-200">
-              <div class="flex items-center">
-                <div class="bg-blue-100 p-2 rounded-full mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <span class="font-medium text-gray-800">Pré-matrícula Online</span>
-              </div>
-            </a>
-            
-            <a href="#" 
-               class="block p-3 border border-gray-200 rounded-lg hover:bg-blue-50 transition duration-200">
-              <div class="flex items-center">
-                <div class="bg-purple-100 p-2 rounded-full mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                  </svg>
-                </div>
-                <span class="font-medium text-gray-800">Solicitação de Transferência</span>
-              </div>
-            </a>
-            
-            <a href="#" 
-               class="block p-3 border border-gray-200 rounded-lg hover:bg-blue-50 transition duration-200">
-              <div class="flex items-center">
-                <div class="bg-yellow-100 p-2 rounded-full mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <span class="font-medium text-gray-800">Material Didático</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- Services Section -->
     <section id="servicos" class="py-16 bg-white">
       <div class="container mx-auto px-4">
@@ -2534,107 +2634,185 @@
       </div>
     </section>
 
-   <!-- SECRETARIA Section -->
-<section id="secretaria" class="py-16 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-blue-900 mb-2">Secretaria</h2>
-      <!--
+    <!-- SECRETARIA Section -->
+    <section id="secretaria" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-blue-900 mb-2">Secretaria</h2>
+          <!--
       <p class="text-gray-600 max-w-2xl mx-auto">
         Encontre respostas para as dúvidas mais comuns sobre os serviços
         educacionais.
       </p>
       -->
-    </div>
+        </div>
 
-    <div class="max-w-5xl mx-auto space-y-6">
+        <div class="max-w-5xl mx-auto space-y-6">
+          <!-- Prefeito -->
+          <div
+            class="card-pessoa bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5"
+          >
+            <img
+              src="./imgs/Simao-Durando-Prefeito.jpeg"
+              class="w-[190px] h-auto object-cover rounded"
+              alt="Prefeito de Petrolina Simão Durando"
+            />
+            <div class="flex-1 min-w-0">
+              <h2 class="text-xl font-semibold text-blue-900">
+                Simão Amorim Durando Filho
+              </h2>
+              <h3 class="text-lg font-semibold text-blue-900 mt-1">
+                Prefeito Municipal de Petrolina
+              </h3>
+              <p class="text-gray-600 mb-4 text-justify">
+                Simão Amorim Durando Filho, natural de Petrolina, é filho do
+                ex-prefeito Simão Amorim Durando e de Josefa Durando, casado com
+                Alinne Monteiro Cavalcante Durando e pai de Giovanna e Ana Luh.
+                É bacharel em Publicidade e Marketing pela FATEC de São Paulo e
+                pós- graduado em Gestão Empresarial pela Fundação Dom Cabral.
+                Possui cursos de extensão pelo Instituto Brasiliense de Direito
+                (IDP) nas áreas de Orçamento Público, Gestão de Pessoas e Gestão
+                em Licitações e Contratos. Atuou como secretário parlamentar do
+                deputado federal Fernando Filho na Câmara dos Deputados, diretor
+                do SEST-SENAT de Petrolina, secretário de Governo e Agricultura
+                de Petrolina e vice-prefeito do município. Foi reeleito prefeito
+                de Petrolina em 2024 para o mandato de 2025 a 2029, tendo como
+                vice-prefeito Ricardo Coelho.
+              </p>
+            </div>
+          </div>
 
-      <!-- Prefeito -->
-      <div class="card-pessoa bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5">
-        <img 
-          src="./imgs/Simao-Durando-Prefeito.jpeg" 
-          class="w-[190px] h-auto object-cover rounded" 
-          alt="Prefeito de Petrolina Simão Durando"
-        />
-        <div class="flex-1 min-w-0">
-          <h2 class="text-xl font-semibold text-blue-900">Simão Amorim Durando Filho</h2>
-          <h3 class="text-lg font-semibold text-blue-900 mt-1">Prefeito Municipal de Petrolina</h3>
-          <p class="text-gray-600 mb-4 text-justify">
-            Simão Amorim Durando Filho, natural de Petrolina, é filho do ex-prefeito Simão Amorim
-            Durando e de Josefa Durando, casado com Alinne Monteiro Cavalcante Durando e pai de
-            Giovanna e Ana Luh. É bacharel em Publicidade e Marketing pela FATEC de São Paulo e pós-
-            graduado em Gestão Empresarial pela Fundação Dom Cabral. Possui cursos de extensão pelo
-            Instituto Brasiliense de Direito (IDP) nas áreas de Orçamento Público, Gestão de Pessoas e
-            Gestão em Licitações e Contratos. Atuou como secretário parlamentar do deputado federal
-            Fernando Filho na Câmara dos Deputados, diretor do SEST-SENAT de Petrolina, secretário de
-            Governo e Agricultura de Petrolina e vice-prefeito do município. Foi reeleito prefeito de Petrolina
-            em 2024 para o mandato de 2025 a 2029, tendo como vice-prefeito Ricardo Coelho.
-          </p>
+          <!-- Secretária -->
+          <div
+            class="card-pessoa bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5"
+          >
+            <img
+              src="./imgs/Rosana-Secretária.jpeg"
+              class="w-[190px] h-auto object-cover rounded"
+              alt="Rosane da Costa Santos, Secretária"
+            />
+            <div class="flex-1 min-w-0">
+              <h2 class="text-xl font-semibold text-blue-900">
+                Rosane da Costa Santos
+              </h2>
+              <h3 class="text-lg font-semibold text-blue-900 mt-1">
+                Secretária de Educação, Cultura e Esporte
+              </h3>
+              <p class="text-gray-600 mb-4 text-justify">
+                Natural de Casa Nova (BA), é pedagoga, especialista em Gestão
+                Escolar e professora efetiva das Redes Municipais de Petrolina e
+                Juazeiro. Na Rede Municipal de Petrolina atua há 12 anos, foi
+                professora substituta e efetiva, coordenadora pedagógica,
+                gestora escolar, tutora de gestão escolar, secretária executiva
+                de ensino e secretária executiva de administração. Desde 2022 é
+                a Secretária Municipal de Educação, Cultura e Esporte de
+                Petrolina.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion sobre a Secretaria -->
+          <div class="max-w-5xl mx-auto p-6">
+            <button
+              class="accordion-button cursor-pointer border-b-2 border-blue-900 pb-2 mb-6 flex justify-between items-center w-full"
+            >
+              <h1 class="text-2xl font-bold text-blue-900">
+                SECRETARIA DE EDUCAÇÃO, CULTURA E ESPORTE
+              </h1>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#366fec"
+                class="accordion-icon"
+              >
+                <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+              </svg>
+            </button>
+
+            <div class="accordion-content">
+              <h2 class="text-xl font-semibold text-blue-800 mb-4">
+                ATRIBUIÇÕES E ESTRUTURA:
+              </h2>
+
+              <p class="text-gray-700 mb-6">
+                Composta por Secretarias Executivas, Assessoria Técnica e
+                Jurídica.
+              </p>
+
+              <h2 class="text-xl font-semibold text-blue-800 mb-4">
+                São competências da Secretaria Municipal de Educação, Cultura e
+                Esporte – SEDUCE:
+              </h2>
+
+              <ol
+                class="list-decimal pl-6 space-y-3 text-gray-700"
+                style="list-style-type: upper-roman"
+              >
+                <li class="pl-2">
+                  Promover as condições necessárias ao desenvolvimento
+                  intelectual, físico e moral dos munícipes de Petrolina,
+                  competindo-lhe ainda;
+                </li>
+                <li class="pl-2">
+                  Desenvolver, precipuamente, políticas e diretrizes de
+                  desenvolvimento da educação infantil e do ensino fundamental;
+                </li>
+                <li class="pl-2">
+                  Promover o atendimento de jovens e adultos de 15 anos e mais,
+                  que ao longo de sua vida não tiveram oportunidade sequer de se
+                  alfabetizarem ou concluírem seus estudos na idade certa;
+                </li>
+                <li class="pl-2">
+                  Estabelecer mecanismos que avaliem e garantam a qualidade do
+                  ensino público;
+                </li>
+                <li class="pl-2">
+                  Definir parâmetros e realizar avaliações, pesquisas e
+                  inovações educacionais, garantindo a organização e
+                  funcionamento da escola municipal;
+                </li>
+                <li class="pl-2">
+                  Acompanhar e apoiar a gestão das unidades escolares,
+                  fomentando um movimento de reflexão e ação em torno de eixos
+                  importantes: indicadores, processos escolares e instrumentos
+                  de gestão;
+                </li>
+                <li class="pl-2">
+                  Subsidiar o planejamento integrado do município, em sua área
+                  de atuação;
+                </li>
+                <li class="pl-2">
+                  Orientar e inspecionar o funcionamento de estabelecimentos de
+                  ensino de sua área de competência;
+                </li>
+                <li class="pl-2">
+                  Implementar metodologias de acompanhamento e formação em
+                  serviço, feita no dia a dia da escola, visando potencializar
+                  os diretores e exercer um impacto na melhoria da aprendizagem
+                  dos alunos;
+                </li>
+                <li class="pl-2">
+                  Instituir a Política de Valorização do Magistério, elaborando
+                  as diretrizes e ações sistematizadas de valorização do
+                  professor, atuando em sua formação, exercício da profissão e
+                  resultados alcançados;
+                </li>
+                <li class="pl-2">
+                  Manter estreita relação e vínculo de comunicação com todas as
+                  Secretarias, visando a boa gestão, comunicação e eficácia do
+                  serviço público;
+                </li>
+                <li class="pl-2">
+                  Realizar outras atividades correlatas que lhe forem delegadas
+                  pelo chefe do executivo municipal.
+                </li>
+              </ol>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Secretária -->
-      <div class="card-pessoa bg-white rounded-lg shadow-md p-6 border-t-2 flex items-start gap-5">
-        <img 
-          src="./imgs/Rosana-Secretária.jpeg" 
-          class="w-[190px] h-auto object-cover rounded" 
-          alt="Rosane da Costa Santos, Secretária"
-        />
-        <div class="flex-1 min-w-0">
-          <h2 class="text-xl font-semibold text-blue-900">Rosane da Costa Santos</h2>
-          <h3 class="text-lg font-semibold text-blue-900 mt-1">Secretária de Educação, Cultura e Esporte</h3>
-          <p class="text-gray-600 mb-4 text-justify">
-            Natural de Casa Nova (BA), é pedagoga, especialista em Gestão Escolar e professora efetiva
-            das Redes Municipais de Petrolina e Juazeiro. Na Rede Municipal de Petrolina atua há 12 anos,
-            foi professora substituta e efetiva, coordenadora pedagógica, gestora escolar, tutora de
-            gestão escolar, secretária executiva de ensino e secretária executiva de administração. Desde
-            2022 é a Secretária Municipal de Educação, Cultura e Esporte de Petrolina.
-          </p>
-        </div>
-      </div>
-
-      <!-- Accordion sobre a Secretaria -->
-      <div class="max-w-5xl mx-auto p-6">
-        <button class="accordion-button cursor-pointer border-b-2 border-blue-900 pb-2 mb-6 flex justify-between items-center w-full">
-          <h1 class="text-2xl font-bold text-blue-900">
-            SECRETARIA DE EDUCAÇÃO, CULTURA E ESPORTE
-          </h1>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#366fec" class="accordion-icon">
-            <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
-          </svg>
-        </button>
-
-        <div class="accordion-content">
-          <h2 class="text-xl font-semibold text-blue-800 mb-4">ATRIBUIÇÕES E ESTRUTURA:</h2> 
-
-          <p class="text-gray-700 mb-6">
-            Composta por Secretarias Executivas, Assessoria Técnica e Jurídica.
-          </p>
-          
-          <h2 class="text-xl font-semibold text-blue-800 mb-4">
-            São competências da Secretaria Municipal de Educação, Cultura e Esporte – SEDUCE:
-          </h2>
-          
-          <ol class="list-decimal pl-6 space-y-3 text-gray-700" style="list-style-type: upper-roman;">
-            <li class="pl-2">Promover as condições necessárias ao desenvolvimento intelectual, físico e moral dos munícipes de Petrolina, competindo-lhe ainda;</li>
-            <li class="pl-2">Desenvolver, precipuamente, políticas e diretrizes de desenvolvimento da educação infantil e do ensino fundamental;</li>
-            <li class="pl-2">Promover o atendimento de jovens e adultos de 15 anos e mais, que ao longo de sua vida não tiveram oportunidade sequer de se alfabetizarem ou concluírem seus estudos na idade certa;</li>
-            <li class="pl-2">Estabelecer mecanismos que avaliem e garantam a qualidade do ensino público;</li>
-            <li class="pl-2">Definir parâmetros e realizar avaliações, pesquisas e inovações educacionais, garantindo a organização e funcionamento da escola municipal;</li>
-            <li class="pl-2">Acompanhar e apoiar a gestão das unidades escolares, fomentando um movimento de reflexão e ação em torno de eixos importantes: indicadores, processos escolares e instrumentos de gestão;</li>
-            <li class="pl-2">Subsidiar o planejamento integrado do município, em sua área de atuação;</li>
-            <li class="pl-2">Orientar e inspecionar o funcionamento de estabelecimentos de ensino de sua área de competência;</li>
-            <li class="pl-2">Implementar metodologias de acompanhamento e formação em serviço, feita no dia a dia da escola, visando potencializar os diretores e exercer um impacto na melhoria da aprendizagem dos alunos;</li>
-            <li class="pl-2">Instituir a Política de Valorização do Magistério, elaborando as diretrizes e ações sistematizadas de valorização do professor, atuando em sua formação, exercício da profissão e resultados alcançados;</li>
-            <li class="pl-2">Manter estreita relação e vínculo de comunicação com todas as Secretarias, visando a boa gestão, comunicação e eficácia do serviço público;</li>
-            <li class="pl-2">Realizar outras atividades correlatas que lhe forem delegadas pelo chefe do executivo municipal.</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Contact Section -->
     <section id="contato" class="py-16 bg-blue-900 text-white">
@@ -2768,21 +2946,6 @@
               <h3 class="text-xl font-semibold mb-4">Redes Sociais</h3>
               <!--Facebook-->
               <div class="flex space-x-4">
-                <a
-                  href="#"
-                  class="bg-blue-700 hover:bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center transition duration-300"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
-                    />
-                  </svg>
-                </a>
                 <!--Instagram-->
                 <a
                   href="https://www.instagram.com/prefeiturapetrolina/"
@@ -2799,22 +2962,7 @@
                     />
                   </svg>
                 </a>
-                <!--Twitter-->
-                <a
-                  href="#"
-                  class="bg-blue-700 hover:bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center transition duration-300"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                    />
-                  </svg>
-                </a>
+
                 <!--YouTube-->
                 <a
                   href="https://www.youtube.com/@sistemaseducepetrolina"
@@ -2985,5 +3133,5 @@
       </svg>
     </button>
   </body>
-   <script src="script.js"></script>
+  <script src="script.js"></script>
 </html>

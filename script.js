@@ -6,6 +6,51 @@ mobileMenuButton.addEventListener("click", () => {
   menu.classList.toggle("hidden");
 });
 
+// JavaScript para o menu mobile
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("menu");
+
+  mobileMenuButton.addEventListener("click", function () {
+    menu.classList.toggle("mobile-active");
+    menu.classList.toggle("hidden");
+
+    // Posicionamento do menu mobile
+    if (menu.classList.contains("mobile-active")) {
+      menu.style.position = "absolute";
+      menu.style.top = "100%";
+      menu.style.left = "0";
+      menu.style.right = "0";
+      menu.style.backgroundColor = "#1e3a8a"; // bg-blue-900
+      menu.style.flexDirection = "column";
+      menu.style.padding = "1rem";
+      menu.style.gap = "0.5rem";
+      menu.style.zIndex = "50";
+      menu.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
+    } else {
+      menu.removeAttribute("style");
+    }
+  });
+
+  // Fechar menu ao clicar em um link (para mobile)
+  const menuLinks = menu.querySelectorAll("a");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      if (window.innerWidth < 768) {
+        menu.classList.remove("mobile-active");
+        menu.classList.add("hidden");
+      }
+    });
+  });
+
+  // Fechar menu ao redimensionar para desktop
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 768) {
+      menu.classList.remove("mobile-active", "hidden");
+      menu.removeAttribute("style");
+    }
+  });
+});
 // Tab arrows
 const scrollContainer = document.getElementById("tabs-scroll");
 document.getElementById("scroll-left").addEventListener("click", () => {
@@ -111,8 +156,18 @@ const container_eventos = document.getElementById("proximos-eventos");
 let currentDate = new Date();
 
 const meses = [
-  "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
-  "Jul", "Ago", "Set", "Out", "Nov", "Dez"
+  "Jan",
+  "Fev",
+  "Mar",
+  "Abr",
+  "Mai",
+  "Jun",
+  "Jul",
+  "Ago",
+  "Set",
+  "Out",
+  "Nov",
+  "Dez",
 ];
 
 const eventos = [
@@ -185,7 +240,7 @@ function renderCalendar() {
   }
 
   // Get events for the current month being displayed
-  const eventosDoMes = eventos.filter(evento => evento.mes === month);
+  const eventosDoMes = eventos.filter((evento) => evento.mes === month);
 
   // Add cells for each day of the month
   for (let day = 1; day <= daysInMonth; day++) {
@@ -206,15 +261,11 @@ function renderCalendar() {
       month === today.getMonth() &&
       year === today.getFullYear()
     ) {
-      dayElement.classList.add(
-        "bg-blue-100",
-        "font-semibold",
-        "text-blue-800"
-      );
+      dayElement.classList.add("bg-blue-100", "font-semibold", "text-blue-800");
     }
 
     // Check if there are events on this day
-    const temEvento = eventosDoMes.some(evento => evento.dia === day);
+    const temEvento = eventosDoMes.some((evento) => evento.dia === day);
 
     if (temEvento) {
       dayElement.innerHTML = `
@@ -262,8 +313,12 @@ function renderUpcomingEvents() {
 
     eventoDiv.innerHTML = `
       <div class="bg-blue-100 rounded-lg p-2 mr-4">
-        <span class="block text-blue-800 font-bold text-center">${evento.dia}</span>
-        <span class="block text-blue-600 text-xs text-center">${meses[evento.mes]}</span>
+        <span class="block text-blue-800 font-bold text-center">${
+          evento.dia
+        }</span>
+        <span class="block text-blue-600 text-xs text-center">${
+          meses[evento.mes]
+        }</span>
       </div>
       <div>
         <h5 class="font-medium text-blue-900">${evento.nome}</h5>
